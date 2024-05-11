@@ -1,11 +1,15 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "./firebase.config";
-import { GoogleAuthProvider } from "firebase/auth/cordova";
+// import { GoogleAuthProvider } from "firebase/auth/cordova";
+import { GoogleAuthProvider } from "firebase/auth";
+
+
 
 export const AuthContext = createContext(null);
 // social
-const googleProvider = new GoogleAuthProvider();
+// const googleProvider = new GoogleAuthProvider();
+const provider = new GoogleAuthProvider();
 
 
 const FirebaseProvider = ({children}) => {
@@ -44,7 +48,7 @@ const FirebaseProvider = ({children}) => {
         setLoading(true);
 
 
-       return signInWithPopup(auth, googleProvider)
+       return signInWithPopup(auth, provider)
     }
 
 

@@ -1,14 +1,20 @@
 
+import { Link } from 'react-router-dom';
 import './Banner.css'
 const Banner = () => {
-    
-    
+
+
     return (
-        <div  className="bgg h-full bg-cover bg-no-repeat"> 
-       {/* <img src="/public/img/sara-cervera-0X6sEvSJxas-unsplash.jpg" alt="" /> */}
-            <h1>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto facere corrupti modi. Explicabo impedit voluptatibus dolor iure. Nemo, ratione autem officia molestias fugit blanditiis est suscipit ullam impedit quasi. Veritatis?
-            </h1>
+        <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/NY1vjTF/volkan-vardar-1-H30u-RC1plc-unsplash.jpg)' }}>
+            {/* <div className="bg-gradient-to-r from-cyan-500 to-blue-500"></div> */}
+            
+            <div className="hero-content text-center text-neutral-content">
+                <div className="max-w-md  bg-slate-600 bg-opacity-50">
+                    <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <Link to='/allFood' className="btn btn-primary">All Food</Link>
+                </div>
+            </div>
         </div>
     );
 };

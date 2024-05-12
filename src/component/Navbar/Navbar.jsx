@@ -9,6 +9,9 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+        <li><NavLink to="/allFood">All Food</NavLink></li>
+        <li><NavLink to="/gallery">Gallery</NavLink></li>
+        <li><NavLink to="/addFood">Add Food</NavLink></li>
 
 
 
@@ -18,7 +21,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-violet-950 mb-8">
+        <div className="navbar shadow-lg rounded-lg mb-8">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

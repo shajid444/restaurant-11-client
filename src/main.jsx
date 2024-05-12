@@ -12,6 +12,9 @@ import Register from './component/Register/Register.jsx';
 import Login from './component/Login/Login.jsx';
 import Error from './component/Error/Error.jsx';
 import FirebaseProvider from './component/firebase/FirebaseProvider.jsx';
+import AllFood from './component/AllFood/AllFood.jsx';
+import Gallery from './component/Gallery/Gallery.jsx';
+import AddFood from './component/AddFood/AddFood.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/allFood",
+        element: <AllFood />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery/>,
+      },
+      {
+        path: "/addFood",
+        element: <AddFood/>,
       },
     ],
   },

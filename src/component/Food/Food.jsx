@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Food = ({food}) => {
     console.log(food);
-    const {FoodImage, FoodCategory, quantity, Price, FoodName } = food;
+    const {_id, FoodImage, FoodCategory, quantity, Price, FoodName } = food;
     // const {'Food Name'} = food;
     return (
         <div className="lg:max-w-xs md:max-w-xs sm:w-full lg:mx-auto mt-7 mb-7 rounded-md shadow-2xl shadow-slate-400 dark:bg-gray-50 dark:text-gray-800 " >
@@ -20,7 +20,7 @@ const Food = ({food}) => {
 
                     </div>
                 </div>
-                <Link to={`/viewDetails/${food._id}`}>
+                <Link to={`/viewDetails/${_id}`}>
 
                     <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button>
                 </Link>

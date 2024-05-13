@@ -2,10 +2,21 @@ import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 
+
 const ViewDetails = () => {
     const details = useLoaderData();
     console.log(details);
     const { _id,FoodImage, FoodCategory, quantity, Price, FoodName, Description, MadeBy, FoodOrigin } = details;
+
+    // const tspot = {FoodImage, FoodCategory, quantity, Price, FoodName, Description, MadeBy, FoodOrigin } ;
+    // ---------------------------------------
+   
+
+    
+
+
+
+    // -----------------------------------------
     return (
        
         <div className="p-4 w-3/4 mx-auto shadow-xl bg-slate-300 ">
@@ -48,7 +59,7 @@ const ViewDetails = () => {
                    
                 </div>
                 <div className="w-full">
-                        <Link to={`/purchase/${_id}`} className="btn w-full bg-primary">Purchase</Link>
+                        <Link  to={`/purchase/${_id}`} className="btn w-full bg-primary">Purchase</Link>
                     </div>
 
 

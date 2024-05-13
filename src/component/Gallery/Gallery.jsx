@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Gallery = () => {
@@ -39,7 +40,7 @@ const Gallery = () => {
                                      ">
                                         <div>
                                             <h1 className="text-3xl text-white">{img.FoodName}</h1>
-                                            <button className="btn mt-10">ADD</button>
+                                            <Link to='/modal' className="btn mt-10">ADD</Link>
                                         </div>
 
 

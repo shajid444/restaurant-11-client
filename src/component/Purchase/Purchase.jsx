@@ -17,7 +17,7 @@ const Purchase = () => {
     // -------------------------
     const addPurchase = ()=>{
 
-        fetch('http://localhost:5000/purchase',{
+        fetch(`${import.meta.env.VITE_API_URL}/purchase`,{
             method : 'POST',
             headers:{
                 'content-type': 'application/json'

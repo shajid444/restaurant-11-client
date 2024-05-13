@@ -17,6 +17,7 @@ import Gallery from './component/Gallery/Gallery.jsx';
 import AddFood from './component/AddFood/AddFood.jsx';
 import ViewDetails from './component/ViewDetails/ViewDetails.jsx';
 import Purchase from './component/Purchase/Purchase.jsx';
+import Modal from './component/Modal/Modal.jsx';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/addFood",
         element: <AddFood/>,
+      },
+      {
+        path: "/modal",
+        element: <Modal/>,
       },
     ],
   },

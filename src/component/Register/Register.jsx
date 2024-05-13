@@ -26,6 +26,23 @@ const Register = () => {
         const { email, password, image, username } = data;
         console.log(email,username);
 
+        // ------------------------
+        fetch(`${import.meta.env.VITE_API_URL}/user`, {
+            method :'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+            if(data.insertedId){
+                // toast('user info added into database')
+                console.log('success');
+            }
+        })
+
 
         // create user and update profile
         createUser(email, password)

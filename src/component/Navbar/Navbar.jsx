@@ -51,6 +51,15 @@ const Navbar = () => {
                             <li>
                                 <button className="btn btn-sm btn-ghost">{user.displayName || 'name not found'}</button>
                             </li>
+                            <li>
+                                <button className="btn btn-sm btn-ghost"> My added food items </button>
+                            </li>
+                            <li>
+                                <button className="btn btn-sm btn-ghost">Add a food item </button>
+                            </li>
+                            <li>
+                                <button className="btn btn-sm btn-ghost">My ordered food items </button>
+                            </li>
 
                         </ul>
 

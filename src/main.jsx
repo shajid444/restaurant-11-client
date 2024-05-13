@@ -16,6 +16,7 @@ import AllFood from './component/AllFood/AllFood.jsx';
 import Gallery from './component/Gallery/Gallery.jsx';
 import AddFood from './component/AddFood/AddFood.jsx';
 import ViewDetails from './component/ViewDetails/ViewDetails.jsx';
+import Purchase from './component/Purchase/Purchase.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
       {
         path: "/viewDetails/:id",
         element: <ViewDetails />,
+        loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/foods/${params.id}`),
+      },
+      {
+        path: "/purchase/:id",
+        element: <Purchase />,
         loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/foods/${params.id}`),
       },
       {

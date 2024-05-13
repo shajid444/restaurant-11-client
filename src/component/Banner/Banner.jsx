@@ -1,21 +1,122 @@
 
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import './Banner.css'
 const Banner = () => {
 
 
     return (
-        <div className="hero min-h-screen rounded-xl " style={{ backgroundImage: 'url(https://i.ibb.co/NY1vjTF/volkan-vardar-1-H30u-RC1plc-unsplash.jpg)' }}>
-            {/* <div className="bg-gradient-to-r from-cyan-500 to-blue-500"></div> */}
-            
-            <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md  bg-slate-600 bg-opacity-50">
-                    <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <Link to='/allFood' className="btn btn-primary">All Food</Link>
-                </div>
-            </div>
-        </div>
+        <>
+            <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                loop={true}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+            >
+                <SwiperSlide>
+                    <div
+                        className='w-full bg-center bg-cover h-[38rem]'
+                        style={{
+                            backgroundImage: `url("https://i.ibb.co/zHsmmDN/ivan-torres-MQUqbmsz-GGM-unsplash.jpg")`,
+                        }}
+                    >
+                        <div className='flex items-center justify-center w-full h-full bg-gray-900/70'>
+                            <div className='text-center'>
+                                <h1 className='text-3xl font-semibold text-white lg:text-4xl'>
+                                    Build your new <span className='text-blue-400'>Saas</span> Project
+                                </h1>
+                                <br />
+                                <Link to ='/allFood' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none focus:bg-gray-500'>
+                                    All Food
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                </SwiperSlide>
+                <SwiperSlide>
+                <div
+                        className='w-full bg-center bg-cover h-[38rem]'
+                        style={{
+                            backgroundImage: `url("https://i.ibb.co/bNSnSZ4/ric-matkowski-T8-SD7bwyx-HU-unsplash.jpg")`,
+                        }}
+                    >
+                        <div className='flex items-center justify-center w-full h-full bg-gray-900/70'>
+                            <div className='text-center'>
+                                <h1 className='text-3xl font-semibold text-white lg:text-4xl'>
+                                    Build your new <span className='text-blue-400'>Saas</span> Project
+                                </h1>
+                                <br />
+                                <Link to ='/allFood' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none focus:bg-gray-500'>
+                                    All Food
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div
+                        className='w-full bg-center bg-cover h-[38rem]'
+                        style={{
+                            backgroundImage: `url("https://i.ibb.co/jHQhRKn/anthony-espinosa-In-CMGusi-Av-A-unsplash.jpg")`,
+                        }}
+                    >
+                        <div className='flex items-center justify-center w-full h-full bg-gray-900/70'>
+                            <div className='text-center'>
+                                <h1 className='text-3xl font-semibold text-white lg:text-4xl'>
+                                    Build your new <span className='text-blue-400'>Saas</span> Project
+                                </h1>
+                                <br />
+                                <Link to ='/allFood' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none focus:bg-gray-500'>
+                                    All Food
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div
+                        className='w-full bg-center bg-cover h-[38rem]'
+                        style={{
+                            backgroundImage: `url("https://i.ibb.co/YbQyfC4/nicholas-grande-d9jc-PTRD9fo-unsplash.jpg")`,
+                        }}
+                    >
+                        <div className='flex items-center justify-center w-full h-full bg-gray-900/70'>
+                            <div className='text-center'>
+                                <h1 className='text-3xl font-semibold text-white lg:text-4xl'>
+                                    Build your new <span className='text-blue-400'>Saas</span> Project
+                                </h1>
+                                <br />
+                                <Link to ='/allFood' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none focus:bg-gray-500'>
+                                    All Food
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+              
+            </Swiper>
+        </>
     );
 };
 

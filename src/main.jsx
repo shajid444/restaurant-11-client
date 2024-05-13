@@ -15,6 +15,7 @@ import FirebaseProvider from './component/firebase/FirebaseProvider.jsx';
 import AllFood from './component/AllFood/AllFood.jsx';
 import Gallery from './component/Gallery/Gallery.jsx';
 import AddFood from './component/AddFood/AddFood.jsx';
+import ViewDetails from './component/ViewDetails/ViewDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,12 @@ const router = createBrowserRouter([
       {
         path: "/allFood",
         element: <AllFood />,
+        loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/foods`),
+      },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails />,
+        loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/foods/${params.id}`),
       },
       {
         path: "/gallery",

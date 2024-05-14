@@ -12,9 +12,9 @@ const Login = () => {
     // navigation
     const navigate = useNavigate();
     const location = useLocation();
-    // console.log(location);
+    console.log(location.state);
     
-    const form = location?.state || '/';
+    // const form = location?.state || '/';
    
 
     const {
@@ -27,11 +27,11 @@ const Login = () => {
         const {email, password} = data;
         signInUser(email, password)
         .then((result)=>{
-            if(result.user){
-                navigate(form);
+            
+                navigate(location?.state ? location?.state : '/');
                 // toast('success')
                 console.log(result.user);
-            }
+            
         })
         .catch(error =>{
             console.log(error);

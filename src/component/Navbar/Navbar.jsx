@@ -40,9 +40,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-end z-50 ">
                 {
-                    user ? <div className="dropdown dropdown-end flex items-center" >
+                    user ? <div className="dropdown dropdown-end " >
                         <label tabIndex={0} className="btn  btn-ghost btn-circle avatar" >
-                            <div className=" w-10 rounded-full ">
+                            <div className=" w-10 rounded-full flex items-center ">
                                 <img alt="Tailwind CSS Navbar component" src={user?.
                                     photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
                             </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
 
                         </ul>
 
-                        <button onClick={logOut}>Log Out</button>
+                        <button  onClick={logOut}>Log Out</button>
                     </div>
 
 

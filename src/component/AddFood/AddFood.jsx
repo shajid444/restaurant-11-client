@@ -1,5 +1,6 @@
 // import Swal from "sweetalert2";
 
+import Swal from "sweetalert2";
 import useAuth from "../Hooks/useAuth";
 
 
@@ -24,26 +25,26 @@ const AddFood = () => {
         const item = { photo, food_name, country_name, food_catagory, quantity, shortDescription, price, displayName,email  };
         console.log(item);
 
-        // fetch('', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(tspot)
-        // }).then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             // form.reset;
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Tourist place added successfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //             })
+        fetch(`${import.meta.env.VITE_API_URL}/addFood`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    // form.reset;
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Food added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
 
-        //         }
-        //     })
+                }
+            })
 
 
     }

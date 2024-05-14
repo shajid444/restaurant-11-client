@@ -52,13 +52,13 @@ const Navbar = () => {
                                 <button className="btn btn-sm btn-ghost">{user.displayName || 'name not found'}</button>
                             </li>
                             <li>
-                                <button className="btn btn-sm btn-ghost"> My added food items </button>
+                                <Link to='/addedFood' className="btn btn-sm btn-ghost"> My added food items </Link>
                             </li>
                             <li>
-                                <button className="btn btn-sm btn-ghost">Add a food item </button>
+                                <Link to ='/addFood' className="btn btn-sm btn-ghost">Add a food item </Link>
                             </li>
                             <li>
-                                <button className="btn btn-sm btn-ghost">My ordered food items </button>
+                                <Link to='/myPurchaseItem' className="btn btn-sm btn-ghost">My ordered food items </Link>
                             </li>
 
                         </ul>

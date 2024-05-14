@@ -6,12 +6,13 @@ import Swal from "sweetalert2";
 const Purchase = () => {
     const purchase = useLoaderData();
     const {user} = useAuth();
+    // const purchase = loadedList.filter(load => load.email == user.email);
     const name = user.displayName;
     const email = user.email;
     console.log(purchase);
-    const { quantity, Price, FoodName } = purchase;
+    const { quantity, Price, FoodName, FoodImage } = purchase;
 
-    const forStore = {name, email, quantity, Price, FoodName}
+    const forStore = {name, email, quantity, Price, FoodName, FoodImage}
    
     const date = Date.now();
     // -------------------------
@@ -30,7 +31,7 @@ const Purchase = () => {
                 // form.reset;
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Tourist place added successfully',
+                    text: ' added successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })

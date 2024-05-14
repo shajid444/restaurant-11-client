@@ -18,6 +18,9 @@ import AddFood from './component/AddFood/AddFood.jsx';
 import ViewDetails from './component/ViewDetails/ViewDetails.jsx';
 import Purchase from './component/Purchase/Purchase.jsx';
 import Modal from './component/Modal/Modal.jsx';
+import MyAddedFood from './component/MyAddedFood/MyAddedFood.jsx';
+import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
+import MyPurchaseItem from './component/MyPurchaseItem/MyPurchaseItem.jsx';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +66,21 @@ const router = createBrowserRouter([
       {
         path: "/modal",
         element: <Modal/>,
+      },
+      {
+        path: "/addedFood",
+        element: <MyAddedFood/>,
+        loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/addFood`),
+      },
+      {
+        path: '/updatepage/:id',
+        element: <UpdatePage></UpdatePage>,
+        loader : ({params})=> fetch(`${import.meta.env.VITE_API_URL}/addFood/${params.id}`),
+      },
+      {
+        path: '/myPurchaseItem',
+        element: <MyPurchaseItem></MyPurchaseItem>,
+        loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/purchase`),
       },
     ],
   },

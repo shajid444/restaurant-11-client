@@ -10,10 +10,10 @@ const MyAddedFood = () => {
     const [list, setList] = useState(load);
     console.log(list);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
+        <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
             {
-                list.map(list => <div key={list._id} className="card w-96 bg-base-100 shadow-xl image-full">
-                    <figure><img src={list.photo} alt="Shoes" /></figure>
+                list.map(list => <div key={list._id} className="card lg:w-96 mx-auto bg-base-100 shadow-xl image-full">
+                    <figure><img src={list.photo} alt="Food" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Name : {list.food_name}</h2>
                         <p>Price :{list.price}</p>

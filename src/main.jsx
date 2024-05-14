@@ -21,6 +21,7 @@ import Modal from './component/Modal/Modal.jsx';
 import MyAddedFood from './component/MyAddedFood/MyAddedFood.jsx';
 import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
 import MyPurchaseItem from './component/MyPurchaseItem/MyPurchaseItem.jsx';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/purchase/:id",
-        element: <Purchase />,
+        element:<PrivateRoute> <Purchase /> </PrivateRoute> ,
         loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/foods/${params.id}`),
       },
       {
@@ -61,15 +62,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/addFood",
-        element: <AddFood/>,
+        element: <PrivateRoute><AddFood/></PrivateRoute>,
       },
       {
         path: "/modal",
-        element: <Modal/>,
+        element: <PrivateRoute><Modal/></PrivateRoute>,
       },
       {
         path: "/addedFood",
-        element: <MyAddedFood/>,
+        element: <PrivateRoute><MyAddedFood/></PrivateRoute>,
         loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/addFood`),
       },
       {
@@ -79,7 +80,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/myPurchaseItem',
-        element: <MyPurchaseItem></MyPurchaseItem>,
+        element: <PrivateRoute> <MyPurchaseItem></MyPurchaseItem> </PrivateRoute>,
         loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/purchase`),
       },
     ],
@@ -88,7 +89,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='max-w-7xl mx-auto'>
+    <div className='max-w-7xl mx-auto bg-slate-200'>
     <HelmetProvider>
      <FirebaseProvider>
      <RouterProvider router={router} />

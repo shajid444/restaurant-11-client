@@ -33,7 +33,7 @@ const Gallery = () => {
 
                                 <div key={img._id} className="text-white shadow-md rounded-lg overflow-hidden relative group">
 
-                                    <img src={img.FoodImage} alt="" className="w-full max-w-[300px] h-[350px] rounded-lg" />
+                                    <img src={img.FoodImage} alt="" className="w-full object-cover max-w-[300px] h-[350px] rounded-lg" />
 
                                     {/* overlay section */}
                                     <div className="absolute top-[-100%] left-0 opacity-0 group-hover:opacity-100 group-hover:top-0 p-4 w-full h-full bg-black/60 group-hover:backdrop-blur-sm divide-neutral-500

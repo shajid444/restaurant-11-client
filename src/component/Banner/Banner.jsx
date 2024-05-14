@@ -18,7 +18,7 @@ const Banner = () => {
 
     return (
         <>
-            <Swiper
+            <Swiper 
                 spaceBetween={30}
                 centeredSlides={true}
                 loop={true}
@@ -31,7 +31,7 @@ const Banner = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
+                className="mySwiper rounded-xl"
             >
                 <SwiperSlide>
                     <div

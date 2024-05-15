@@ -45,22 +45,22 @@ const router = createBrowserRouter([
       {
         path: "/allFood",
         element: <AllFood />,
-        loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/foods`),
+        loader: ()=> fetch(`https://assignment-11-server-omega-two.vercel.app/foods`),
       },
       {
         path: "/topFood",
         element: <TopFoodSection />,
-        // loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/foods`),
+        // loader: ()=> fetch(`https://assignment-11-server-omega-two.vercel.app/foods`),
       },
       {
         path: "/viewDetails/:id",
         element: <ViewDetails />,
-        loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/foods/${params.id}`),
+        loader: ({params})=> fetch(`https://assignment-11-server-omega-two.vercel.app/foods/${params.id}`),
       },
       {
         path: "/purchase/:id",
         element:<PrivateRoute> <Purchase /> </PrivateRoute> ,
-        loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/foods/${params.id}`),
+        loader: ({params})=> fetch(`https://assignment-11-server-omega-two.vercel.app/foods/${params.id}`),
       },
       {
         path: "/gallery",
@@ -77,17 +77,17 @@ const router = createBrowserRouter([
       {
         path: "/addedFood",
         element: <PrivateRoute><MyAddedFood/></PrivateRoute>,
-        loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/addFood`),
+        loader: ()=> fetch(`https://assignment-11-server-omega-two.vercel.app/addFood`),
       },
       {
         path: '/updatepage/:id',
         element: <UpdatePage></UpdatePage>,
-        loader : ({params})=> fetch(`${import.meta.env.VITE_API_URL}/addFood/${params.id}`),
+        loader : ({params})=> fetch(`https://assignment-11-server-omega-two.vercel.app/addFood/${params.id}`),
       },
       {
         path: '/myPurchaseItem',
         element: <PrivateRoute> <MyPurchaseItem></MyPurchaseItem> </PrivateRoute>,
-        loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/purchase`),
+        loader: ()=> fetch(`https://assignment-11-server-omega-two.vercel.app/purchase`),
       },
     ],
   },

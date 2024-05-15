@@ -18,7 +18,7 @@ const Purchase = () => {
     // -------------------------
     const addPurchase = () => {
 
-        fetch(`${import.meta.env.VITE_API_URL}/purchase`, {
+        fetch(`https://assignment-11-server-omega-two.vercel.app/purchase`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

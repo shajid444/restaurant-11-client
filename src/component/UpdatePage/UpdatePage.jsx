@@ -26,7 +26,7 @@ const UpdatePage = () => {
         const item = { photo, food_name, country_name, food_catagory, quantity, shortDescription, price, displayName,email  };
         console.log(item);
 
-        fetch(`${import.meta.env.VITE_API_URL}/addFood/${update._id}`, {
+        fetch(`https://assignment-11-server-omega-two.vercel.app/addFood/${update._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

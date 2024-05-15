@@ -27,7 +27,7 @@ const Register = () => {
         console.log(email,username);
 
         // ------------------------
-        fetch(`${import.meta.env.VITE_API_URL}/user`, {
+        fetch(`https://assignment-11-server-omega-two.vercel.app/user`, {
             method :'POST',
             headers:{
                 'content-type':'application/json'

@@ -7,7 +7,7 @@ const Gallery = () => {
     const [imgs, setimg] = useState([]);
 
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/foods`)
+        fetch(`https://assignment-11-server-omega-two.vercel.app/foods`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

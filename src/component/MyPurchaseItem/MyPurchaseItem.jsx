@@ -34,7 +34,7 @@ const MyPurchaseItem = () => {
             if (result.isConfirmed) {
 
                 console.log('delete confirmed');
-                fetch(`${import.meta.env.VITE_API_URL}/purchase/${_id}`, {
+                fetch(`https://assignment-11-server-omega-two.vercel.app/purchase/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

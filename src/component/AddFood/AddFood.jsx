@@ -2,6 +2,7 @@
 
 import Swal from "sweetalert2";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const AddFood = () => {
@@ -50,6 +51,9 @@ const AddFood = () => {
     }
     return (
         <section className="p-6 ">
+            <Helmet>
+            <title>Omiza/Add Food</title>
+        </Helmet>
             <form onSubmit={addFood} className="container flex flex-col mx-auto space-y-12">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
                     <div className="space-y-2 col-span-full lg:col-span-1">

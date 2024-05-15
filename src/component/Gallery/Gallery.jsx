@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
@@ -21,6 +22,9 @@ const Gallery = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-primary to-primary/70 grid place-items-center">
             <div className="container mx-auto p-10">
+            <Helmet>
+            <title>Omiza/Gallery</title>
+        </Helmet>
                 <h1 className='text-3xl mb-5 text-white text-center font-bold'> Gallery</h1>
 
                 {/* card section */}

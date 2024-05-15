@@ -22,6 +22,7 @@ import MyAddedFood from './component/MyAddedFood/MyAddedFood.jsx';
 import UpdatePage from './component/UpdatePage/UpdatePage.jsx';
 import MyPurchaseItem from './component/MyPurchaseItem/MyPurchaseItem.jsx';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute.jsx';
+import TopFoodSection from './component/TopFoodSection/TopFoodSection.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
         path: "/allFood",
         element: <AllFood />,
         loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/foods`),
+      },
+      {
+        path: "/topFood",
+        element: <TopFoodSection />,
+        // loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/foods`),
       },
       {
         path: "/viewDetails/:id",

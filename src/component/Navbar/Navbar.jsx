@@ -31,7 +31,9 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl text-primary">Restaurant</a>
+                <div className="h-28 rounded-full w-28">
+                    <img className="rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KKiAXODCnf1OoNvhSzLxMIu2qC-yxKSI_g&s" alt="" />
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex ml-40">
                 <ul className="menu menu-horizontal px-1">

@@ -48,7 +48,7 @@ const Purchase = () => {
 
 
     return (
-        <div className="card w-full bg-primary text-primary-content">
+        <div className="card w-full bg-slate-200 text-primary-content">
             <div className="card-body text-center">
                 <h2 className="text-2xl font-bold text-black">{FoodName}</h2>
                 <p className="text-xl font-semibold text-black">Price :{Price}</p>

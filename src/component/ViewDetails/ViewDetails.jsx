@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
+import {toast } from 'react-toastify';
+import Swal from "sweetalert2";
 
 
 
@@ -13,7 +15,10 @@ const ViewDetails = () => {
    
 
     
-
+// if(quantity<1 || quantity>20){
+//     // toast("Item is not available");
+//     Swal.fire("SweetAlert2 is working!");
+// }
 
 
     // -----------------------------------------
@@ -59,7 +64,11 @@ const ViewDetails = () => {
                    
                 </div>
                 <div className="w-full">
-                        <Link  to={`/purchase/${_id}`} className="btn w-full bg-primary">Purchase</Link>
+                { quantity<1 || quantity>20 ?" disable" 
+                    :
+                    <Link  to={`/purchase/${_id}`} className="btn w-full bg-primary">Purchase</Link>
+                    }
+                        
                     </div>
 
 
